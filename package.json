@@ -1,0 +1,12 @@
+{
+  "name": "mainpage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "format:css": "prettier --write ./src/style.css"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-css-order": "^2.0.1"
+  }
+}

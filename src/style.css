@@ -1,0 +1,65 @@
+:root {
+  --time-delay: 3s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: black;
+  height: 100dvh;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  display: flex;
+  position: relative;
+  align-items: center;
+  box-shadow: 0 0 2rem 1.5rem purple inset;
+  border: 4px solid white;
+  border-radius: 1.5rem;
+  padding: 1.5em 2em;
+  min-width: 40%;
+  max-width: 70%;
+  min-height: 20%;
+  font-size: 1.5rem;
+}
+
+a {
+  color: hotpink;
+  word-break: break-all;
+}
+
+a:hover {
+  color: cyan;
+}
+
+.loading {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: fade 0.5s var(--time-delay, 3s) normal forwards;
+  inset: 0;
+  font-size: 2.5rem;
+}
+
+.loaded {
+  animation: fade 0.5s var(--time-delay) reverse backwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
